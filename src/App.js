@@ -1,13 +1,23 @@
 import './App.css';
 import Header from './components/Header/Header';
+import Home from './pages/Home/Home';
+import Form from './pages/Form/Form';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
 
 
   return (
-    <html>
+    <div>
       <Header title="TO-DO LIST"/>
-    </html>
+
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/form" element={<Form/>}/>
+      </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
